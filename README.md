@@ -102,3 +102,10 @@ For Render/Railway/Fly/Koyeb, provision:
 - Beat process from `backend/Procfile`
 
 Set `DATABASE_URL`, `CELERY_BROKER_URL`, `CELERY_RESULT_BACKEND`, `SECRET_KEY`, `ALLOWED_HOSTS`, and `CORS_ALLOWED_ORIGINS`.
+
+For this deployed pair:
+
+- Frontend `VITE_API_BASE_URL`: `https://playto-assignment-09c4.onrender.com`
+- Backend `CORS_ALLOWED_ORIGINS`: `https://playto-assignment-zeta.vercel.app`
+
+The frontend now falls back to localhost only during local development. In production, if `VITE_API_BASE_URL` is missing, it will use the Render backend URL above.
